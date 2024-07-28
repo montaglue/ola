@@ -32,6 +32,10 @@ def write_strings(filename: str, content: list[str]) -> Result[None, str]:
         return Err(f'Error writing the file {filename}')
 
 def stubborn_input(message: str = '') -> int:
+    '''
+    This function reads an integer from the user input.
+    The ignoring of signal interruptions is intended behavior.
+    '''
     result = 0
     has_input = False
     while not has_input:

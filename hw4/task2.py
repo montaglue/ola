@@ -3,7 +3,7 @@ sys.path.append('../common')
 
 from input import stubborn_input
 
-def gcd(a, b):
+def gcd(a: int, b: int) -> int:
     if b == 0:
         return a
     return gcd(b, a % b)
